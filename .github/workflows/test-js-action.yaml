@@ -10,13 +10,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Hello world action tests
-        uses: bmorrisondev/create-branch-js-action@v1
+        uses: bmorrisondev/create-branch-js-action@v3
         id: hello
         with:
           org_name: bmorrison-ps
           database_name: recipes_db
+          parent_branch_name: main
           branch_name: actionsjs
-          who-to-greet: brian
         env:
           PLANETSCALE_TOKEN_NAME: ${{ secrets.PLANETSCALE_TOKEN_NAME }}
           PLANETSCALE_TOKEN: ${{ secrets.PLANETSCALE_TOKEN }}
