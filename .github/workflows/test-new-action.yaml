@@ -15,7 +15,6 @@ jobs:
         with:
           org_name: bmorrison-ps
           database_name: recipes_db
-          branch_name: actionstest
         env:
           PLANETSCALE_TOKEN_NAME: ${{ secrets.PLANETSCALE_TOKEN_NAME }}
           PLANETSCALE_TOKEN: ${{ secrets.PLANETSCALE_TOKEN }}
