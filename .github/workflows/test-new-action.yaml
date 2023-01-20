@@ -13,6 +13,7 @@ jobs:
         uses: bmorrisondev/hello-world-action@v5
         id: hello
         with:
+          org_name: bmorrison-ps
           database_name: recipes_db
           branch_name: actionstest
         env:
