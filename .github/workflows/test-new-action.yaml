@@ -1,0 +1,16 @@
+on: [workflow_dispatch]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Hello GH Actions!
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Hello world action tests
+        uses: ./
+        id: hello
+        with:
+          who-to-greet: "Rawrasaurus Rex"
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
