@@ -15,10 +15,11 @@ jobs:
         with:
           org_name: bmorrison-ps
           database_name: recipes_db
-          branch_name: firstrun
+          branch_name: secondrun
           source_branch: rawr
+          generate_credentials: true
         env:
           PLANETSCALE_TOKEN_NAME: ${{ secrets.PLANETSCALE_TOKEN_NAME }}
           PLANETSCALE_TOKEN: ${{ secrets.PLANETSCALE_TOKEN }}
-      # - name: Get the output time
-      #   run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Echo the creds
+        run: echo "Username - ${{ steps.hello.outputs.username }}\nHostname - ${{ steps.hello.outputs.hostname }}"
