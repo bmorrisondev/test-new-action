@@ -1,4 +1,5 @@
-on: [workflow_dispatch]
+on:
+  push
 
 name: Make a branch
 
@@ -10,13 +11,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Hello world action tests
-        uses: bmorrisondev/ps-actions/create-password@v0.0.10
+        uses: bmorrisondev/ps-actions/create-password@v0.0.11
         id: hello
         with:
           org_name: bmorrison-ps
           database_name: recipes_db
           branch_name: main
-          name: pass123
+          name: pass123asd
         env:
           PLANETSCALE_TOKEN_NAME: ${{ secrets.PLANETSCALE_TOKEN_NAME }}
           PLANETSCALE_TOKEN: ${{ secrets.PLANETSCALE_TOKEN }}
