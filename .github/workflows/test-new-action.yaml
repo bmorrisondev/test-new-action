@@ -11,15 +11,14 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Hello world action tests
-        uses: bmorrisondev/ps-actions/create-password@v0.0.11
+        uses: bmorrisondev/ps-actions/create-branch@v0.0.12
         id: hello
         with:
           org_name: bmorrison-ps
           database_name: recipes_db
-          branch_name: main
-          name: pass123asd
+          branch_name: withscripts
+          from: main
+          wait: true
         env:
           PLANETSCALE_TOKEN_NAME: ${{ secrets.PLANETSCALE_TOKEN_NAME }}
           PLANETSCALE_TOKEN: ${{ secrets.PLANETSCALE_TOKEN }}
-      - name: Echo the creds
-        run: echo "Username - ${{ steps.hello.outputs.username }}\nHostname - ${{ steps.hello.outputs.hostname }}"
