@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-			- name: Extract branch name
-			  shell: bash
-			  run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
-			  id: extract_branch
-			- name: Get the new credentials
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
+        id: extract_branch
+      - name: Get the new credentials
         run: |
           echo "${{ steps.extract_branch.outputs.branch }}"
