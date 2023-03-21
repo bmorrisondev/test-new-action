@@ -17,7 +17,7 @@ jobs:
         id: extract_branch
       - name: printenv
         run: |
-          echo "base branch: ${{ github.event.pull_request.base.label }}"
+          echo "base branch: ${{ github.event.pull_request.base.ref }}"
       - name: Get the new credentials
         run: |
           echo "${{ steps.extract_branch.outputs.branch }}"
