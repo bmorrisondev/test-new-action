@@ -16,8 +16,8 @@ jobs:
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         id: extract_branch
       - name: printenv
-        shell: bash
-        run: printenv
+        run: |
+          echo "base branch: ${{ github.event.pull_request.base.label }}"
       - name: Get the new credentials
         run: |
           echo "${{ steps.extract_branch.outputs.branch }}"
