@@ -24,13 +24,13 @@ jobs:
         uses: logesh-kumar/fancy-echo@v1.2.0
         with:
           # Who to greet
-          who-to-greet: github.event.pull_request.base.ref
+          who-to-greet: ${{ github.event.pull_request.base.ref }}
       - name: fancy-echo
         # You may pin to the exact commit or the version.
         # uses: logesh-kumar/fancy-echo@0de86478aa9c149c7bfb8f8303c49f8e233af966
         uses: logesh-kumar/fancy-echo@v1.2.0
         with:
-          who-to-greet: github.event.pull_request.head.ref
+          who-to-greet: ${{ github.event.pull_request.head.ref }}
       - name: Get the new credentials
         run: |
           echo "${{ steps.extract_branch.outputs.branch }}"
