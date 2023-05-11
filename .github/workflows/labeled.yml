@@ -6,10 +6,11 @@ on:
     
 jobs:
   assign_issue:
-    if: ${{ github.event.label.name == '📝 docs' }}
+#     if: ${{ github.event.label.name == '📝 docs' }}
     runs-on: ubuntu-latest
     steps:
       - run: | 
+          gh --version
           echo ${{ github.event.label.name }}
           echo ${{ github.event.issue.id }}
           echo ${{ github.event.issue.number }}
