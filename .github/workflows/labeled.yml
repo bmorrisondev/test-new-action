@@ -1,0 +1,13 @@
+name: Assign DevEd to docs issues
+
+on:
+  issues:
+    types: [labeled]
+    
+jobs:
+  assign_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | 
+          echo ${{ github.event.issue.labels }}
+    
