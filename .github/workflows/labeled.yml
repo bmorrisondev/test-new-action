@@ -11,4 +11,6 @@ jobs:
     steps:
       - run: | 
           echo ${{ github.event.label.name }}
+          echo ${{ github.event.issue.id }}
+          echo ${{ github.event.issue.number }}
     
