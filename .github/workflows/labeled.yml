@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: | 
-          echo ${{ github.event.issue }}
+          echo ${{ github.event.label.name }}
     
