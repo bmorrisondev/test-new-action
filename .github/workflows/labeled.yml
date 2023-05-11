@@ -6,6 +6,7 @@ on:
     
 jobs:
   assign_issue:
+    if: ${{ github.event.label.name == '📝 docs' }}
     runs-on: ubuntu-latest
     steps:
       - run: | 
