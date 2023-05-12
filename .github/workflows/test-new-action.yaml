@@ -11,7 +11,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Hello world action tests
-        uses: planetscale/create-branch-action@81e888e5af62b07d08ae3b4c3bb124243a98f3a8
+        uses: planetscale/create-branch-action@1abcd8cdbf343c7d5c84c3574ce2187f50250f7d
         id: hello
         with:
           org_name: bmorrison-ps
