@@ -11,7 +11,6 @@ jobs:
       - name: doathing
         run: |
           mkdir tmp
-          docker run -v tmp:/tmp  planetscale/pscale:latest help > /tmp/help.txt
+          docker run planetscale/pscale:latest help > help.txt
           ls
-          ls tmp
-          cat tmp/help.txt
+          cat help.txt
