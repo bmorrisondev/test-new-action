@@ -10,4 +10,8 @@ jobs:
     steps:
       - name: doathing
         run: |
-          docker run planetscale/pscale:latest help
+          mkdir tmp
+          docker run -v tmp:/tmp  planetscale/pscale:latest help > /tmp/help.txt
+          ls
+          ls tmp
+          echo tmp/help.txt
