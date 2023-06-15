@@ -14,4 +14,4 @@ jobs:
           docker run -v tmp:/tmp  planetscale/pscale:latest help > /tmp/help.txt
           ls
           ls tmp
-          echo tmp/help.txt
+          cat tmp/help.txt
