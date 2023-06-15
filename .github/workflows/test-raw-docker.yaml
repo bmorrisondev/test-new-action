@@ -13,4 +13,5 @@ jobs:
           mkdir tmp
           docker run planetscale/pscale:latest help > help.txt
           ls
+          echo "==================="
           cat help.txt
