@@ -11,12 +11,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Hello world action tests
-        uses: planetscale/create-branch-action@7c58d5ce324e644aa597bee0a67e106757d80113
+        uses: planetscale/create-branch-action@64791baaa68ff6e8e913ecc3ea8fbc8fc9c721fa
         id: hello
         with:
           org_name: bmorrison-ps
           database_name: recipes_db
-          branch_name: withscriptswait
+          branch_name: dev
           from: main
           wait: true
         env:
