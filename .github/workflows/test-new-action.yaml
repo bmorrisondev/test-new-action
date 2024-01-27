@@ -15,7 +15,7 @@ jobs:
         id: hello
         with:
           org_name: bmorrison-ps
-          database_name: recipes_db
+          database_name: calendar_db
           branch_name: dev
           from: main
           wait: true
