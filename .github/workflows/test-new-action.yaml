@@ -4,9 +4,9 @@ on:
 name: Make a branch
 
 jobs:
-  hello_world_job:
+  make_a_branch:
     runs-on: ubuntu-latest
-    name: Hello GH Actions!
+    name: Create a PlanetScale branch
     steps:
       - name: checkout
         uses: actions/checkout@v3
