@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: Hello world action tests
+      - name: Create PlanetScale branch
         uses: planetscale/create-branch-action@64791baaa68ff6e8e913ecc3ea8fbc8fc9c721fa
         id: hello
         with:
